@@ -1,29 +1,65 @@
 <!DOCTYPE html>
-
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="style.css">
-  <title></title>
+    <title>Khmer Food - Contact</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="page1.html">1</a></li>
-        <li><a href="page2.html">2</a></li>
-        <li><a href="page3.html">3</a></li>
-        <li><a href="page4.html">4</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-  </main>
+<header>
+    <div class="container">
+        <h1>Khmer Food</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cuisine.html">Cuisine</a></li>
+                <li><a href="featured.html">Featured</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
 
-  <footer>
-  </footer>
+
+<section class="container">
+    <h2>Contact Us</h2>
+    <p>Send us a message if you have any questions or feedback.</p>
+
+    <form id="contactForm">
+        <input type="text" id="name" placeholder="Your Name">
+        <input type="email" id="email" placeholder="Your Email">
+        <textarea id="message" placeholder="Your Message"></textarea>
+        <button type="submit">Submit</button>
+    </form>
+
+    <p id="error" style="color:red;"></p>
+</section>
+
+
+<footer>
+    <p>© 2026 Khmer Food Website</p>
+</footer>
+
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let message = document.getElementById("message").value;
+    let error = document.getElementById("error");
+
+    if (name === "" || email === "" || message === "") {
+        error.textContent = "Please fill in all fields.";
+        event.preventDefault();
+    } else {
+        error.textContent = "";
+        alert("Form submitted successfully!");
+    }
+
+});
+</script>
 
 </body>
-
 </html>
