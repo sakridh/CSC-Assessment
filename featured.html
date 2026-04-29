@@ -7,6 +7,8 @@
 <body>
 
 
+
+
 <header>
     <div class="container">
         <h1>Khmer Food</h1>
@@ -20,6 +22,14 @@
         </nav>
     </div>
 </header>
+
+<section class="hero-slider">
+
+    <img class="slide" src="https://silkroadrecipes.com/wp-content/uploads/2024/08/Cambodian-Khmer-Fish-Amok-Recipe-square.jpg" alt="Fish Amok 1">
+    <img class="slide" src="https://img.taste.com.au/7WoMYXPY/taste/2016/11/seafood-amok-traditional-cambodian-seafood-curry-86393-1.jpeg" alt="Fish Amok 2">
+    <img class="slide" src="https://eatwellenjoylife.com/wp-content/uploads/2018/03/Fish-Amok-Alone-1.jpg" alt="Fish Amok 3">
+
+</section>
 
 
 <section class="featured container">
@@ -42,7 +52,7 @@
         </div>
 
         <div class="featured-image">
-            <img src="images/amok.jpg" alt="Fish Amok">
+            <img src="https://substackcdn.com/image/fetch/$s_!8c8U!,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F74322298-70e0-4279-b73d-0d68cd811dab_2879x1920.jpeg" alt="Fish Amok">
         </div>
 
     </div>
@@ -63,6 +73,28 @@
 <footer>
     <p>© 2026 Khmer Food Website</p>
 </footer>
+
+
+<script>
+let index = 0;
+showSlides();
+
+function showSlides() {
+    let slides = document.getElementsByClassName("slide");
+
+    for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    index++;
+    if (index > slides.length) { index = 1 }
+
+    slides[index - 1].style.display = "block";
+
+    setTimeout(showSlides, 3000); 
+}
+</script>
+
 
 </body>
 </html>
